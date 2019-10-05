@@ -9,15 +9,16 @@ class Cart extends Component {
       showCart: false,
     };
   }
+
   checkCart = e => {
     const { showCart } = this.state;
     this.setState({
       showCart: !showCart,
     });
   };
+
   render() {
     const { cartData } = this.props;
-    console.log('cartData: ', JSON.stringify(cartData));
     const { showCart } = this.state;
     let cartContentNode = <span>empty cart</span>;
     if (cartData.length) {
@@ -32,7 +33,7 @@ class Cart extends Component {
           className={showCart ? `cart-title selected-cart` : `cart-title`}
           onClick={this.checkCart}
         >
-          My Cart ({cartData.length})
+          My Cart ( {cartData.length} )
         </div>
         {showCart && <div className="cart-box">{cartContentNode}</div>}
       </div>

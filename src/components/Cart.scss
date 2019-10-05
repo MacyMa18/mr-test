@@ -31,3 +31,11 @@
     background: #fff;
   }
 }
+
+@include apply-to-small-screen {
+  .section-cart {
+    .cart-box {
+      width: calc(100vw - 4rem);
+    }
+  }
+}
