@@ -6,20 +6,20 @@
   font-size: 0.75rem;
   color: rgba(0, 0, 0, 0.4);
   strong {
-    color: #000;
+    color: #222222;
   }
   .sku-size-title {
     font-weight: bold;
   }
   .sku-size-required {
-    color: red;
+    color: #c90000;
   }
   .sku-size-wrapper {
     margin-top: 12px;
   }
   .sku-size-item {
     display: inline-block;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: 1px solid #cccccc;
     margin-right: 6px;
     width: 40px;
     height: 40px;
@@ -28,7 +28,10 @@
     cursor: pointer;
   }
   .selected-item {
-    border: 2px solid #000;
-    color: #000;
+    border: 2px solid #222222;
+    color: #222222;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
   }
 }
