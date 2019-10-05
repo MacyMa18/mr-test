@@ -8,7 +8,7 @@ class ProductInfo extends Component {
       <div className="section-product-info">
         <h2 className="product-name">Classic Tee</h2>
         <div className="product-price">
-          <span itemprop="price">$75.00</span>
+          <span itemProp="price">$75.00</span>
         </div>
         <p className="product-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
