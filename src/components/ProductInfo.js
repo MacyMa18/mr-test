@@ -7,7 +7,9 @@ class ProductInfo extends Component {
     const { info } = this.props;
     return (
       <div className="section-product-info">
-        <h2 className="product-name">{info.name}</h2>
+        <h2 itemProp="name" className="product-name">
+          {info.name}
+        </h2>
         <div className="product-price">
           <span itemProp="price">
             {info.unit}

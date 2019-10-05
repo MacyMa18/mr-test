@@ -7,6 +7,7 @@ class ProductImgs extends Component {
       <div className="section-product-imgs">
         {/* todo usually has many images and a slider but here just use one for demo */}
         <img
+          itemProp="image"
           src={this.props.imgs[0]}
           alt="product-image"
           className="product-img"
