@@ -2,9 +2,11 @@
 
 .section-header {
   background-color: #f6f6f7;
-  height: 30px;
-  .header {
+  .section {
     position: relative;
+    height: 30px;
     display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
   }
 }

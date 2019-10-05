@@ -26,7 +26,10 @@ class Cart extends Component {
     }
     return (
       <div className="section-cart">
-        <div className="cart-title" onClick={this.checkCart}>
+        <div
+          className={showCart ? `cart-title selected-cart` : `cart-title`}
+          onClick={this.checkCart}
+        >
           My Cart ({cartData.length})
         </div>
         {showCart && <div className="cart-box">{cartContentNode}</div>}
