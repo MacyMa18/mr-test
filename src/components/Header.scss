@@ -1,0 +1,10 @@
+@import '../styles/common.scss';
+
+.section-header {
+  background-color: #f6f6f7;
+  height: 30px;
+  .header {
+    position: relative;
+    display: flex;
+  }
+}

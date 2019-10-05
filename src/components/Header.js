@@ -7,7 +7,7 @@ class Header extends Component {
     const { cartData } = this.props;
     return (
       <div className="section-wrapper section-header">
-        <div className="section">
+        <div className="section header">
           <Cart cartData={cartData} />
         </div>
       </div>

@@ -4,6 +4,7 @@ import Product from './components/Product';
 import productData from './mock/products';
 import cartData from './mock/cart';
 
+import 'normalize.css';
 import './App.css';
 
 class App extends Component {

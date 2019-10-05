@@ -3,9 +3,21 @@ import CartItem from './CartItem';
 import './Cart.scss';
 
 class Cart extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showCart: false,
+    };
+  }
+  checkCart = e => {
+    const { showCart } = this.state;
+    this.setState({
+      showCart: !showCart,
+    });
+  };
   render() {
     const { cartData } = this.props;
-    console.log('cartData: ', cartData);
+    const { showCart } = this.state;
     let cartContentNode = <span>empty cart</span>;
     if (cartData.length) {
       cartContentNode = cartData.map((cart, index) => {
@@ -13,9 +25,11 @@ class Cart extends Component {
       });
     }
     return (
-      <div className="section-wrapper section-cart">
-        <div className="cart-title">My Cart ({cartData.length})</div>
-        <div className="cart-box">{cartContentNode}</div>
+      <div className="section-cart">
+        <div className="cart-title" onClick={this.checkCart}>
+          My Cart ({cartData.length})
+        </div>
+        {showCart && <div className="cart-box">{cartContentNode}</div>}
       </div>
     );
   }

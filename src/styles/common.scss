@@ -1,0 +1,6 @@
+// for small screen
+@mixin apply-to-small-screen {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
