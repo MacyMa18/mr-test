@@ -5,10 +5,11 @@ import './Cart.scss';
 class Cart extends Component {
   render() {
     const { cartData } = this.props;
+    console.log('cartData: ', cartData);
     let cartContentNode = <span>empty cart</span>;
     if (cartData.length) {
       cartContentNode = cartData.map((cart, index) => {
-        return <CartItem itemData={cart} />;
+        return <CartItem itemData={cart} key={index} />;
       });
     }
     return (

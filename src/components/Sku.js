@@ -2,16 +2,10 @@ import React, { Component } from 'react';
 import './Sku.scss';
 
 class Sku extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      skuData: props.skuData || [],
-      selectedSkuId: props.selectedSkuId,
-    };
-  }
   render() {
-    const { skuData, selectedSkuId } = this.state;
+    const { skuData, selectedSkuId } = this.props;
     let selectedSkuName = '';
+
     skuData.map(sku => {
       if (sku.sku_id === selectedSkuId) {
         selectedSkuName = sku.sku_name;
@@ -24,7 +18,13 @@ class Sku extends Component {
           <div className="sku-size-wrapper">
             {skuData.map((sku, index) => {
               return (
-                <div className="sku-size-item" key={sku.sku_id}>
+                <div
+                  className="sku-size-item"
+                  key={sku.sku_id}
+                  onClick={() => {
+                    this.props.selectSku(sku.sku_id);
+                  }}
+                >
                   {sku.sku_name}
                 </div>
               );

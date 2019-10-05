@@ -3,17 +3,31 @@ import './CartItem.scss';
 
 class CartItem extends Component {
   render() {
+    const { itemData } = this.props;
+    let selectedSkuName = '';
+
+    itemData.sku_size.map(sku => {
+      if (sku.sku_id === itemData.selectedSkuId) {
+        selectedSkuName = sku.sku_name;
+      }
+    });
     return (
       <div className="section-wrapper section-cart-item">
         <div className="cart-item-image">
           <img src="" alt="cart-product-image" />
         </div>
         <div className="cart-item-info">
-          <span className="cart-item-info-content">Classic Tee</span>
+          <span className="cart-item-info-content">{itemData.name}</span>
           <span className="cart-item-info-content">
-            1 X <span itemProp="price">$75.00</span>
+            {itemData.quantity} X{' '}
+            <span itemProp="price">
+              {itemData.unit}
+              {itemData.price}
+            </span>
           </span>
-          <span className="cart-item-info-content">Size: S</span>
+          <span className="cart-item-info-content">
+            Size: {selectedSkuName}
+          </span>
         </div>
       </div>
     );
