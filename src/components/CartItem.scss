@@ -1,0 +1,23 @@
+@import '../styles/common.scss';
+
+.section-cart-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .cart-item-image {
+    img {
+      width: 70px;
+    }
+    margin-right: 20px;
+  }
+  .cart-item-info {
+    .cart-item-info-content {
+      display: block;
+      font-size: 0.75rem;
+      margin-bottom: 12px;
+    }
+  }
+}

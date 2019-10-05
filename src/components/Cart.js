@@ -17,6 +17,7 @@ class Cart extends Component {
   };
   render() {
     const { cartData } = this.props;
+    console.log('cartData: ', JSON.stringify(cartData));
     const { showCart } = this.state;
     let cartContentNode = <span>empty cart</span>;
     if (cartData.length) {
@@ -24,6 +25,7 @@ class Cart extends Component {
         return <CartItem itemData={cart} key={index} />;
       });
     }
+
     return (
       <div className="section-cart">
         <div

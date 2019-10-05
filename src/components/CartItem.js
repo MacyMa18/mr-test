@@ -14,16 +14,16 @@ class CartItem extends Component {
     return (
       <div className="section-wrapper section-cart-item">
         <div className="cart-item-image">
-          <img src="" alt="cart-product-image" />
+          <img src={itemData.images} alt="cart-product-image" />
         </div>
         <div className="cart-item-info">
           <span className="cart-item-info-content">{itemData.name}</span>
           <span className="cart-item-info-content">
             {itemData.quantity} X{' '}
-            <span itemProp="price">
+            <strong itemProp="price">
               {itemData.unit}
               {itemData.price}
-            </span>
+            </strong>
           </span>
           <span className="cart-item-info-content">
             Size: {selectedSkuName}
