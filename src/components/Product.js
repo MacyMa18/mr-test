@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ProductImgs from './ProductImgs';
 import ProductInfo from './ProductInfo';
 
+import './Product.scss';
+
 class Product extends Component {
   render() {
     const { productData } = this.props;

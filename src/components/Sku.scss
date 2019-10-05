@@ -1,0 +1,34 @@
+@import '../styles/common.scss';
+
+.section-sku {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.4);
+  strong {
+    color: #000;
+  }
+  .sku-size-title {
+    font-weight: bold;
+  }
+  .sku-size-required {
+    color: red;
+  }
+  .sku-size-wrapper {
+    margin-top: 12px;
+  }
+  .sku-size-item {
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin-right: 6px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .selected-item {
+    border: 2px solid #000;
+    color: #000;
+  }
+}
