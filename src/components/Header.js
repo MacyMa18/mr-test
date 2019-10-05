@@ -4,10 +4,11 @@ import './Header.scss';
 
 class Header extends Component {
   render() {
+    const { cartData } = this.props;
     return (
       <div className="section-wrapper section-header">
         <div className="section">
-          <Cart />
+          <Cart cartData={cartData} />
         </div>
       </div>
     );
