@@ -5,7 +5,7 @@ import productData from './mock/products';
 import cartData from './mock/cart';
 
 import 'normalize.css';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor(props) {

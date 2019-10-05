@@ -1,0 +1,26 @@
+@import './styles/common.scss';
+html {
+  font-size: 16px;
+}
+body {
+  padding-bottom: 30px;
+}
+@include apply-to-small-screen {
+  html {
+    font-size: 20px;
+  }
+}
+
+.section {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@include apply-to-small-screen {
+  .section {
+    width: auto;
+    margin: 0 0;
+    padding: 0 1rem;
+  }
+}

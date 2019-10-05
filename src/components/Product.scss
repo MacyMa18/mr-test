@@ -7,3 +7,11 @@
     margin-top: 40px;
   }
 }
+
+@include apply-to-small-screen {
+  .section-product {
+    .section {
+      flex-direction: column;
+    }
+  }
+}
