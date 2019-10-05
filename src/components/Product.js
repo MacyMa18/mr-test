@@ -7,10 +7,11 @@ import './Product.scss';
 class Product extends Component {
   render() {
     const { productData } = this.props;
+
     return (
       <div className="section-wrapper section-product">
         <div className="section">
-          <ProductImgs img={productData.images} />
+          <ProductImgs imgs={productData.images} />
           <ProductInfo
             info={productData}
             selectSku={this.props.selectSku}

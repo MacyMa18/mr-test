@@ -31,10 +31,13 @@ class App extends Component {
   addToCart = () => {
     const { product, cart } = this.state;
     const selectedSkuId = product.selectedSkuId;
-    // TODO
+    // TODO in real world, need to use a better way to show the tip
     if (!selectedSkuId) {
-      alert('please select size!');
+      alert('Please select a size!');
     }
+    // TODO usually need to use some packages
+    // like lodash or deepcopy to copy and create a new data
+    // here just for demo
     let cartItem = JSON.parse(JSON.stringify(product));
     cartItem.quantity = 1;
 
@@ -65,7 +68,7 @@ class App extends Component {
   render() {
     const { product, cart } = this.state;
     return (
-      <div className="App">
+      <>
         <Header cartData={cart} />
         <Product
           productData={product}
@@ -74,7 +77,7 @@ class App extends Component {
           }}
           addToCart={this.addToCart}
         />
-      </div>
+      </>
     );
   }
 }

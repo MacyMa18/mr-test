@@ -5,7 +5,12 @@ class ProductImgs extends Component {
   render() {
     return (
       <div className="section-product-imgs">
-        <img src={this.props.img} alt="product-image" className="product-img" />
+        {/* todo usually has many images and a slider but here just use one for demo */}
+        <img
+          src={this.props.imgs[0]}
+          alt="product-image"
+          className="product-img"
+        />
       </div>
     );
   }
