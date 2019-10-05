@@ -6,7 +6,9 @@ class Header extends Component {
   render() {
     return (
       <div className="section-wrapper section-header">
-        <Cart />
+        <div className="section">
+          <Cart />
+        </div>
       </div>
     );
   }

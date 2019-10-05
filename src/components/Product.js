@@ -6,8 +6,10 @@ class Product extends Component {
   render() {
     return (
       <div className="section-wrapper section-product">
-        <ProductImgs />
-        <ProductInfo />
+        <div className="section">
+          <ProductImgs />
+          <ProductInfo />
+        </div>
       </div>
     );
   }
